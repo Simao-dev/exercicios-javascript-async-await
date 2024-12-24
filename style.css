@@ -1,0 +1,13 @@
+:root {
+    --rosa: #E465DF;
+    --background: #211727;
+    --colofont: #211727;
+    --colorfundo: #211727;
+    --font: "prompt", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
