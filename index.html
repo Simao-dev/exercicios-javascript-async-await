@@ -15,25 +15,70 @@
     <aside>
         <img src="img/logoMundoPet.svg" alt="logo">
         <nav>
-            <ul>
+            <ul class="lista-links">
                 <li>
-                    <a href="#">Publicar</a>
+                    <a href="#" class="link-destaque">Publicar</a>
                 </li>
                 <li>
-                    <a href="#">Feed</a><img src="img/feed.svg" alt="feed">
+                    <a href="#"><img src="img/feed.svg" alt="feed">Feed</a>
                 </li>
                 <li>
-                    <a href="#">Perfil</a><img src="img/cat.svg" alt="">
+                    <a href="#"><img src="img/cat.svg" alt="">Perfil</a>
                 </li>
                 <li>
-                    <a href="#">Sobre nós</a><img src="img/info.svg" alt="informações">
+                    <a href="#"><img src="img/info.svg" alt="informações">Sobre nós</a>
                 </li>
                 <li>
-                    <a href="#">Sair</a><img src="img/logout.svg" alt="logout">
+                    <a href="#"><img src="img/logout.svg" alt="logout">Sair</a>
                 </li>
             </ul>
         </nav>
     </aside>
+
+    <main>
+        <div class="container-upload-imagem">
+            <div class="container-imagem">
+                <img src="img/9f002d63eec87c8bad7223ae480bbccf.jpg" alt="">
+            </div>
+            <button id="upload-btn">Carregar imagem</button>
+            <input type="file" id="imagem-upload" accept="imagem/" style="display: none;"/>
+            <div class="container-imagem-nome">
+                <p>imagem_projeto.png</p>
+                <img src="img/close.svg" alt="">
+            </div>
+        </div>
+        <div class="container-descricao">
+            <h2>Nova Foto</h2>
+            <form action="">
+                <div>
+                    <label for="">Titulo da foto</label>
+                    <input type="text" id="titulo" name="titulo"/>
+                </div>
+                <div>
+                    <label for="">Descrição</label>
+                    <textarea type="text" id="descricao" name="descricao"></textarea>
+                </div>
+                <div>
+                    <label for="">Hashtags</label>
+                    <input type="text" id="hastag" name="hastag">
+                </div>
+                <ul class="lista-tags">
+                    <li>
+                        <p>Gato laranja</p>
+                        <img src="img/close-black.svg" alt="">
+                    </li>
+                    <li>
+                        <p>Gato adulto</p>
+                        <img src="img/close-black.svg" alt="">
+                    </li>
+                </ul>
+                <div class="container-botoes">
+                    <button class="botao-descartar">Descartar</button>
+                    <button class="botao-publicar">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </main>
     
 </body>
 </html>

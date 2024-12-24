@@ -1,8 +1,9 @@
 :root {
     --rosa: #E465DF;
-    --background: #211727;
-    --colofont: #211727;
-    --colorfundo: #211727;
+    --background: #00090E;
+    --backgroundcontent: #211727;
+    --colofont: #888888;
+    --colorfundo: #E7E5E5;
     --font: "prompt", sans-serif;
 }
 
@@ -10,4 +11,232 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+    /*Corpo do Site*/
+body {
+    background-color: var(--background);
+    color: var(--colofont);
+    font-family: var(--font);
+
+    display: flex;
+    justify-content: center;
+    align-self: start;
+
+    height: 100vh;
+    gap: 27px;
+    padding: 56px 0;
+}
+     /*Menu Lateral*/
+aside {
+    background-color: var(--backgroundcontent);
+    border-radius: 8px;
+    height: 100%;
+    padding: 40px 16px;
+    align-items: center;
+}
+
+.lista-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+    align-items: center;
+    list-style-type: none;
+}
+
+.lista-links li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none; color: var(--colofont);
+    font-size: 22px;
+    
+}
+
+.lista-links li:first-of-type a {
+    color: var(--rosa);
+}
+
+.link-destaque {
+    border: 1px solid var(--rosa);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+    /*Carregar imagem */
+
+main {
+    background-color: var(--backgroundcontent);
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+form div label {
+    font-size: 18px;
+    font-weight: 400px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form div input, textarea {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--colorfundo);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font);
+    line-height: 22.5px;
+}
+
+form div input {
+    height: 39px;
+}
+
+textarea {
+    height: 161px;
+}
+
+.lista-tags li {
+    display: flex;
+    background-color: var(--colorfundo);
+    color: var(--backgroundcontent);
+    gap: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.lista-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.container-botoes {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.container-botoes button {
+    width: 50%;
+    padding: 12px 32px 12px 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.botao-descartar {
+    background-color: var(--backgroundcontent);
+    color: var(--rosa);
+    border: 1px solid var(--rosa);
+    position: relative;
+}
+
+.botao-descartar::after {
+    content: "";
+    background-image: url("img/trash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    top:28px;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.botao-publicar {
+    background-color: var(--rosa);
+    border: 1px solid #132E35;
+    position: relative;
+    color: #132E35;
+}
+
+.botao-publicar::after {
+    content: "";
+    background-image: url("img/upload.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.container-descricao {
+    width: 422px;
+}
+
+.main-imagem {
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+} 
+    /* container imagem*/
+.container-imagem img {
+    width: 444px;
+    height: 312px;
+}
+.container-imagem {
+    height: 368px;
+    padding: 24px 16px;
+    background-color: var(--colorfundo);
+    border-radius: 8px;
+}
+
+.container-upload-imagem button {
+    margin: 16px 0 8px 0;
+    background-color: var(--backgroundcontent);
+    border: 1px solid var(--colofont);
+    border-radius: 8px;
+    color: var(--colofont);
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+}
+
+.container-upload-imagem button::after {
+    content: "";
+    background-image: url("img/uploadCinza.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.container-imagem-nome {
+    display: flex;
+    gap: 8px;
+    color: var(--colofont);
+    font-size: 15px;
 }
